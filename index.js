@@ -40,7 +40,7 @@ inquirer.prompt([
     const svg = new SVG()
     svg.setText(answers.text,answers.textColor)
     svg.setShape(shape)
-    return writeFile("logo.svg",shape.render())
+    return writeFile("logo.svg",svg.render())
   })
   .then(() => {
     console.log("Your SVG has been created!")
